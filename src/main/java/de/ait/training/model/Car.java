@@ -5,7 +5,6 @@ import lombok.*;
 
 @Data
 @NoArgsConstructor
-@Entity
 @Table(name = "cars")
 public class Car {
     @Id
@@ -21,7 +20,7 @@ public class Car {
     @Column(nullable = false)
     private Integer price;
 
-    public Car(int i, String color, String model, Integer price) {
+    public Car(String color, String model, Integer price) {
         this.color = color;
         this.model = model;
         this.price = price;
