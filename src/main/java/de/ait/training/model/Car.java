@@ -5,8 +5,10 @@ import lombok.*;
 
 @Data
 @NoArgsConstructor
+@Entity
 @Table(name = "cars")
 public class Car {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,9 +20,9 @@ public class Car {
     private String model;
 
     @Column(nullable = false)
-    private Integer price;
+    private double price;
 
-    public Car(String color, String model, Integer price) {
+    public Car(String color, String model, double price) {
         this.color = color;
         this.model = model;
         this.price = price;

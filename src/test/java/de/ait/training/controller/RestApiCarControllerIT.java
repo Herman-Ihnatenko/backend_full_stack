@@ -1,6 +1,5 @@
 package de.ait.training.controller;
 
-import org.junit.jupiter.api.*;
 import de.ait.training.model.Car;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,7 +19,8 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-class RestApiCarControllerIT {
+public class RestApiCarControllerIT {
+
 
     @LocalServerPort
     private int port;
@@ -68,5 +68,6 @@ class RestApiCarControllerIT {
         List<Car> cars = Arrays.asList(response.getBody());
         assertThat(cars.isEmpty()).isEqualTo(true);
     }
+
 
 }

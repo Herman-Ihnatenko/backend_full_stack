@@ -1,0 +1,3 @@
+changeSet маленькая миграция
+changeLog набор миграций
+liquibase файл конфигурации
