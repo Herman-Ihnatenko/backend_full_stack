@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+            http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <!-- Каждый changeSet — это одно логическое изменение базы данных -->
+    <!-- id должен быть уникальным числом (в рамках проекта) -->
+    <!-- author — твоё имя или ник -->
+    <changeSet id="3" author="German">
+
+        <!-- Эта команда добавляет в таблицу cars новый столбец engine_type -->
+        <addColumn tableName="cars">
+            <!-- Название столбца и его тип -->
+            <column name="engine_type" type="VARCHAR(64)"/>
+        </addColumn>
+
+        <!-- Rollback — это инструкция, как откатить изменение -->
+        <!-- Если добавить rollback, Liquibase сможет вернуть схему в исходное состояние -->
+        <rollback>
+            <!-- Откатываем добавление столбца: просто удаляем его -->
+            <dropColumn tableName="cars" columnName="engine_type"/>
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>
