@@ -8,5 +8,6 @@
 
     <include file="db/changelog/db.changelog-1-0-create-cars.xml"/>
     <include file="db/changelog/db.changelog-2-0-add-column-year.xml"/>
+    <include file="db/changelog/db.changelog-3.0-add-column-engine_type.xml"/>
 
 </databaseChangeLog>

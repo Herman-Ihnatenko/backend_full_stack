@@ -34,7 +34,7 @@ public class RestApiCarControllerIT {
 
     @Test
     @DisplayName("price between 10000 and 30000, 3 cars were found, status OK")
-    @Sql(scripts = {"classpath:sql/clear.sql", "classpath:sql/seed_cars.sql"})
+    @Sql(scripts = {"classpath:sql/clear.txt", "classpath:sql/seed_cars.txt"})
     void testPriceBetween10000And30000() throws Exception {
         ResponseEntity<Car[]> response = restTemplate.getForEntity(url("/api/cars/price/between/10000/30000"),
                 Car[].class);
@@ -48,7 +48,7 @@ public class RestApiCarControllerIT {
 
     @Test
     @DisplayName("price under 16000, 1 car was found, status OK")
-    @Sql(scripts = {"classpath:sql/clear.sql", "classpath:sql/seed_cars.sql"})
+    @Sql(scripts = {"classpath:sql/clear.txt", "classpath:sql/seed_cars.txt"})
     void testPriceUnder16000Success() {
         ResponseEntity<Car[]> response = restTemplate.getForEntity(url("/api/cars/price/under/16000"),
                 Car[].class);
