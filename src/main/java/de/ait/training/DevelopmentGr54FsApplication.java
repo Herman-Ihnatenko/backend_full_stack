@@ -6,10 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @Slf4j
-public class DevelopementGr54FsApplication {
+public class DevelopmentGr54FsApplication {
+
     public static void main(String[] args) {
         log.info("Starting DevelopmentGr54FsApplication");
-        SpringApplication.run(DevelopementGr54FsApplication.class, args);
+        SpringApplication.run(DevelopmentGr54FsApplication.class, args);
     }
 
 }
